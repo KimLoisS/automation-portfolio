@@ -272,6 +272,12 @@ nav {
   overflow: hidden;
 }
 
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .project-card::before {
   content: "";
   position: absolute;
@@ -527,3 +533,137 @@ footer {
     footer { padding: 24px; }
 }
 
+/* ============================================
+   PROJECT DETAIL PAGE (project1.html)
+   ============================================ */
+.project-hero {
+    padding: 140px 60px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.project-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.project-hero h1 span {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.project-hero p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.project-hero .project-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* DEMO SECTION */
+.demo-section {
+    padding: 60px 60px 100px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.iframe-wrapper {
+    max-width: 700px;
+    margin: 40px auto 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--dark-border);
+    background: var(--dark-card);
+}
+
+.iframe-wrapper iframe {
+    display: block;
+    border: none;
+}
+
+/* BUILD PROCESS / STEPS */
+.build-process {
+    padding: 60px 60px 100px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.steps-list {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.build-step {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 24px;
+}
+
+.step-number {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    background: rgba(108, 99, 255, 0.1);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    border-radius: 12px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.step-content p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.step-image {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--dark-border);
+    display: block;
+}
+
+.step-image-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .project-hero { padding: 110px 24px 60px; }
+    .demo-section { padding: 40px 24px 60px; }
+    .build-process { padding: 40px 24px 60px; }
+    .build-step {
+        grid-template-columns: 1fr;
+    }
+    .step-image-row {
+        grid-template-columns: 1fr;
+    }
+    .iframe-wrapper iframe {
+        height: 1300px;
+    }
+}

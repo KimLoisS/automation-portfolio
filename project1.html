@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Client Intake System | Kim Sangil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">Kim Sangil</div>
+        <ul class="nav-links">
+            <li><a href="index.html">← Back to Portfolio</a></li>
+            <li><a href="#demo">Live Demo</a></li>
+            <li><a href="#how-i-built-it">How I Built It</a></li>
+        </ul>
+    </nav>
+
+    <!-- PROJECT HERO -->
+    <section class="project-hero">
+        <div class="hero-badge">⚡ Project 01</div>
+        <h1>AI Client Intake <span>System</span></h1>
+        <p>A fully automated client onboarding workflow. Submit the form below and within 15 minutes, receive a genuinely personalized AI-generated email response — automatically logged, written, and delivered with zero human involvement.</p>
+        <div class="project-tags">
+            <span class="tag">Make.com</span>
+            <span class="tag">Gemini AI</span>
+            <span class="tag">Google Sheets</span>
+            <span class="tag green">Gmail</span>
+            <span class="tag green">Google Forms</span>
+        </div>
+    </section>
+
+    <!-- LIVE DEMO -->
+    <section class="demo-section" id="demo">
+        <div class="section-label">Try It Yourself</div>
+        <h2 class="section-title">Live Demo</h2>
+        <p class="section-subtitle">Fill this out with real or fake info — it's a live, working automation. Check your inbox (and spam folder) within 15 minutes.</p>
+
+        <div class="iframe-wrapper">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScnAHOwWk66Q7nDQlfhDkYfr-F2ONrUF8mJ77vClBbqJioksg/viewform?embedded=true" width="100%" height="1143" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </section>
+
+    <!-- HOW I BUILT IT -->
+    <section class="build-process" id="how-i-built-it">
+        <div class="section-label">The Process</div>
+        <h2 class="section-title">How I Built It</h2>
+        <p class="section-subtitle">A breakdown of every piece of this automation, from data entry to AI-generated delivery.</p>
+
+        <div class="steps-list">
+
+            <!-- STEP 1 -->
+            <div class="build-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Building the Intake Form</h3>
+                    <p>The process starts with a simple Google Form acting as the data entry point. It collects four pieces of information — name, email, company, and what the person wants automated — deliberately kept short so testers can complete it in under 30 seconds. No Google sign-in required, so anyone can test it freely.</p>
+                    <img src="assets/screenshots/04-google-form-setup.png" alt="Google Form setup" class="step-image">
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="build-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Triggering the Automation</h3>
+                    <p>Every form submission is caught by a Make.com scenario using the Google Forms "Watch Responses" trigger. On the free tier, this polls for new submissions every 15 minutes, then passes all the form data downstream to the rest of the workflow.</p>
+                    <img src="assets/screenshots/05-make-scenario-trigger.png" alt="Make.com scenario trigger" class="step-image">
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="build-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Logging to a Lightweight CRM</h3>
+                    <p>Each form field is dynamically mapped into a Google Sheet acting as a free CRM. Every submission becomes a permanent, timestamped record — exactly the kind of data logging real businesses rely on for tracking leads and inquiries.</p>
+                    <div class="step-image-row">
+                        <img src="assets/screenshots/06-make-sheets-mapping.png" alt="Google Sheets field mapping" class="step-image">
+                        <img src="assets/screenshots/07-make-sheets-live-data.png" alt="Live data in Google Sheets" class="step-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="build-step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3>Generating a Personalized Response with AI</h3>
+                    <p>This is where it gets interesting. A Gemini AI module receives the person's name, company, and stated automation need, then generates a genuinely personalized email — not a generic template. The prompt explicitly instructs the model on tone, length, and structure to keep every response professional and relevant.</p>
+                    <div class="step-image-row">
+                        <img src="assets/screenshots/09-make-gemini-module.png" alt="Gemini AI module configuration" class="step-image">
+                        <img src="assets/screenshots/08-gemini-ai-response.png" alt="Gemini AI generated response" class="step-image">
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 5 -->
+            <div class="build-step">
+                <div class="step-number">05</div>
+                <div class="step-content">
+                    <h3>Delivering the Email Automatically</h3>
+                    <p>Finally, a Gmail module sends the AI-generated text directly to the email address submitted in the form. No drafts, no manual sending — the entire chain from form submission to inbox delivery runs without anyone touching it.</p>
+                    <div class="step-image-row">
+                        <img src="assets/screenshots/10-make-gmail-module.png" alt="Gmail send module configuration" class="step-image">
+                        <img src="assets/screenshots/11-test-email-received.png" alt="Final email received" class="step-image">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="contact" id="contact">
+        <div class="section-label">Let's Talk</div>
+        <h2 class="section-title">Want something like this built for you?</h2>
+        <p>I'm currently open to remote automation roles, freelance projects, and contract work.</p>
+        <div class="contact-links">
+            <a href="mailto:loissangil@gmail.com" class="btn-primary">Send Me An Email</a>
+            <a href="index.html" class="btn-secondary">Back to Portfolio</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Kim Sangil — Built with VS Code, GitHub Pages & zero dollars. 🚀</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
