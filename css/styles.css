@@ -186,10 +186,10 @@ nav {
 }
 
 /* ============================================
-   TECH STRIP
+   TECH STRIP — SCROLLING MARQUEE
    ============================================ */
 .tech-strip {
-  padding: 40px 60px;
+  padding: 40px 0;
   border-top: 1px solid var(--dark-border);
   border-bottom: 1px solid var(--dark-border);
   text-align: center;
@@ -204,20 +204,37 @@ nav {
   margin-bottom: 24px;
 }
 
-.tech-logos {
+.tech-marquee {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.tech-logos-track {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 48px;
-  flex-wrap: wrap;
+  width: max-content;
+  animation: scroll-left 28s linear infinite;
+}
+
+.tech-logos-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .tech-logo {
   color: var(--text-muted);
   font-size: 0.95rem;
   font-weight: 600;
-  transition: color 0.3s;
   letter-spacing: 0.3px;
+  white-space: nowrap;
+  transition: color 0.3s;
 }
 
 .tech-logo:hover {
@@ -508,7 +525,7 @@ footer {
     .nav-links { display: none; }
     .hero { padding: 100px 24px 60px; }
     .tech-strip { padding: 30px 24px; }
-    .tech-logos { gap: 24px; }
+    .tech-logos-track { gap: 24px; }
     .projects { padding: 60px 24px; }
     .about { padding: 60px 24px; }
     .about-inner {
