@@ -716,3 +716,123 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* ============================================
+   VIDEO EMBEDS
+   ============================================ */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto 0;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--dark-border);
+    background: var(--dark-card);
+}
+
+.video-wrapper.vertical {
+    max-width: 320px;
+    padding-bottom: 177.78%;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ============================================
+   DOCUMENTATION BUTTON
+   ============================================ */
+.doc-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(108, 99, 255, 0.1);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    color: var(--primary);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 28px;
+    transition: all 0.3s;
+}
+
+.doc-button:hover {
+    background: rgba(108, 99, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   FEATURE GRID (project3.html)
+   ============================================ */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.feature-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   SHOWCASE LIST (other-work.html)
+   ============================================ */
+.showcase-list {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.showcase-item {
+    background: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-radius: 16px;
+    padding: 40px;
+}
+
+.showcase-item h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.showcase-item .project-tags {
+    margin-bottom: 20px;
+}
+
+.showcase-item > p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .showcase-item { padding: 24px; }
+}
