@@ -989,3 +989,10 @@ body::after {
     border-radius: 24px;
     border: 1px solid var(--dark-border);
 }
+
+#build {
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+}
